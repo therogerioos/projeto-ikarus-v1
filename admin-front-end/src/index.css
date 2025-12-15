@@ -1,0 +1,324 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: 220 17% 97%;
+    --foreground: 220 13% 13%;
+
+    --breakpoint-lg2: 1100px;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 13% 13%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 13% 13%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 220 13% 13%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.75rem;
+
+    /* Status colors */
+    --status-escalado: 142 71% 45%;
+    --status-folga: 220 13% 69%;
+    --status-demitido: 0 84% 60%;
+    --status-ferias: 38 92% 50%;
+    --status-licenca: 262 52% 47%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(217 91% 70%) 100%);
+    
+    /* Shadows */
+    --shadow-soft: 0 2px 8px -2px hsl(220 13% 13% / 0.1);
+    --shadow-medium: 0 4px 16px -4px hsl(220 13% 13% / 0.15);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --animate-wiggle: wiggle 1s ease-in-out infinite;
+  }
+
+  .dark {
+    --background: 220 15% 8%;
+    --foreground: 220 10% 95%;
+
+    --card: 220 15% 11%;
+    --card-foreground: 220 10% 95%;
+
+    --popover: 220 15% 11%;
+    --popover-foreground: 220 10% 95%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 15% 15%;
+    --secondary-foreground: 220 10% 95%;
+
+    --muted: 220 15% 15%;
+    --muted-foreground: 220 10% 65%;
+
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 217 91% 60%;
+
+    /* Status colors - adjusted for dark mode */
+    --status-escalado: 142 71% 55%;
+    --status-folga: 220 13% 50%;
+    --status-demitido: 0 84% 65%;
+    --status-ferias: 38 92% 60%;
+    --status-licenca: 262 52% 60%;
+
+    --shadow-soft: 0 2px 8px -2px hsl(0 0% 0% / 0.3);
+    --shadow-medium: 0 4px 16px -4px hsl(0 0% 0% / 0.4);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@keyframes wiggle {
+    0%,
+    100% {
+      transform: rotate(-3deg);
+    }
+    50% {
+      transform: rotate(3deg);
+    }
+}
+
+
+
+
+.kanit-thin {
+  font-family: "Kanit", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.kanit-extralight {
+  font-family: "Kanit", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.kanit-light {
+  font-family: "Kanit", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.kanit-regular {
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.kanit-medium {
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.kanit-semibold {
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.kanit-bold {
+  font-family: "Kanit", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.kanit-extrabold {
+  font-family: "Kanit", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.kanit-black {
+  font-family: "Kanit", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.kanit-thin-italic {
+  font-family: "Kanit", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.kanit-extralight-italic {
+  font-family: "Kanit", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.kanit-light-italic {
+  font-family: "Kanit", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.kanit-regular-italic {
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.kanit-medium-italic {
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.kanit-semibold-italic {
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.kanit-bold-italic {
+  font-family: "Kanit", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.kanit-extrabold-italic {
+  font-family: "Kanit", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.kanit-black-italic {
+  font-family: "Kanit", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+
+.tablePdf{
+  width: 93%;
+  border-collapse: collapse;
+  margin-left: 40px;
+}
+
+.container-custom {
+    width: 100%;
+    @media (width >= 40rem /* 640px */) {
+        max-width: 40rem /* 640px */;
+    }
+    @media (width >= 48rem /* 768px */) {
+        max-width: 48rem /* 768px */;
+    }
+    @media (width >= 55rem /* 1024px */) {
+        max-width: 55rem /* 1024px */;
+    }
+    @media (width >= 72rem /* 1280px */) {
+        max-width: 72rem /* 1280px */;
+    }
+    @media (width >= 96rem /* 1536px */) {
+        max-width: 76.9rem /* 1536px */;
+    }
+}
+
+.text-success{
+  color: rgb(26, 195, 26)
+}
+
+.text-destructive{
+  color: rgb(225, 44, 44)
+}
+
+@keyframes expandWidth {
+  0% {
+    width: 48px;
+  }
+  100% {
+    width: 150px;
+  }
+}
+
+.expand-width {
+  animation: expandWidth 0.3s ease forwards;
+}
+
+
+@keyframes recueWidth {
+  0% {
+    width: 150px;
+  }
+  100% {
+    width: 45px;
+  }
+}
+
+.recue-width {
+  animation: recueWidth 0.3s ease forwards;
+}
+
+@keyframes expandOpacity {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.expand-opacity {
+  animation: expandOpacity 2s ease forwards;
+}
+
+
+.md {
+    @media (width >= 48rem /* 768px */) {
+        width: calc(var(--spacing) * 50) /* 12.5rem = 200px */;
+    }
+}
+
+

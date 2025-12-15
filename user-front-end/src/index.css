@@ -1,0 +1,227 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 220 13% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 13% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 13% 15%;
+
+    --primary: 220 90% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 220 13% 15%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 8% 46%;
+
+    --accent: 220 90% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --success: 142 86% 40%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 220 90% 45%;
+
+    /* Corporate gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(220, 90%, 45%), hsl(220, 90%, 55%));
+    --gradient-card: linear-gradient(145deg, hsl(0, 0%, 100%), hsl(220, 14%, 98%));
+    --gradient-sidebar: linear-gradient(180deg, hsl(220, 20%, 18%), hsl(220, 25%, 14%));
+
+    /* Professional shadows */
+    --shadow-card: 0 4px 24px hsl(220, 90%, 45% / 0.12);
+    --shadow-button: 0 2px 8px hsl(220, 90%, 45% / 0.25);
+    --shadow-sidebar: 4px 0 24px hsl(220, 25%, 14% / 0.15);
+
+    /* Smooth transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 220 25% 14%;
+    --foreground: 220 14% 96%;
+
+    --card: 220 20% 18%;
+    --card-foreground: 220 14% 96%;
+
+    --popover: 220 20% 18%;
+    --popover-foreground: 220 14% 96%;
+
+    --primary: 220 90% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 20% 20%;
+    --secondary-foreground: 220 14% 96%;
+
+    --muted: 220 20% 20%;
+    --muted-foreground: 220 8% 65%;
+
+    --accent: 220 90% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --success: 142 86% 45%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 55%;
+    --warning-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 65%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 20% 20%;
+    --input: 220 20% 20%;
+    --ring: 220 90% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+
+.kanit-thin {
+  font-family: "Kanit", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.kanit-extralight {
+  font-family: "Kanit", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.kanit-light {
+  font-family: "Kanit", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.kanit-regular {
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.kanit-medium {
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.kanit-semibold {
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.kanit-bold {
+  font-family: "Kanit", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.kanit-extrabold {
+  font-family: "Kanit", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.kanit-black {
+  font-family: "Kanit", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.kanit-thin-italic {
+  font-family: "Kanit", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.kanit-extralight-italic {
+  font-family: "Kanit", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.kanit-light-italic {
+  font-family: "Kanit", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.kanit-regular-italic {
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.kanit-medium-italic {
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.kanit-semibold-italic {
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.kanit-bold-italic {
+  font-family: "Kanit", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.kanit-extrabold-italic {
+  font-family: "Kanit", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.kanit-black-italic {
+  font-family: "Kanit", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+
